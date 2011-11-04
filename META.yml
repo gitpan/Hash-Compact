@@ -26,4 +26,4 @@ resources:
   bugtracker: https://github.com/kentaro/perl-hash-compact/issues
   license: http://dev.perl.org/licenses/
   repository: git://github.com/kentaro/perl-hash-compact.git
-version: 0.03
+version: 0.04
