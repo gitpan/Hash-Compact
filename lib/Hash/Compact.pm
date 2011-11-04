@@ -5,7 +5,7 @@ use warnings;
 use Carp qw(croak);
 use Scalar::Util qw(blessed);
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 sub new {
     my $class   = shift;
@@ -38,7 +38,7 @@ sub param {
             my $option = $self->options->{$key} || {};
             $key = $option->{alias_for} || $key;
 
-            if (!ref $value && $value eq ($option->{default} || '')) {
+            if (defined $value && !ref $value && $value eq ($option->{default} || '')) {
                 delete $self->{$key};
             }
             else {
